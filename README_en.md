@@ -1,10 +1,10 @@
-# ok-script-app
+# ok-wsg (Warship Girls Automation)
 
 English | [中文](README.md)
 
-ok-script-app is a Python automation project template built on [ok-script](https://github.com/ok-oldking/ok-script). It supports GUI automation apps for native Windows games, Android emulators, and browser games.
+ok-wsg is an Android emulator automation app for Warship Girls, built on [ok-script](https://github.com/ok-oldking/ok-script) and initialized from the [ok-script-app](https://github.com/ok-oldking/ok-script-app) template. It currently targets the ADB emulator only; add Warship Girls automation tasks under `src/tasks`.
 
-The template includes task examples, OCR, template matching, configuration widgets, tests, i18n, EXE packaging, and update/release configuration. It is a starter project and feature demo, not a finished automation tool for a specific game.
+The repository includes task examples, OCR, template matching, configuration widgets, tests, i18n, EXE packaging, and update/release configuration as a starter project for Warship Girls automation.
 
 ## Documentation
 
@@ -53,10 +53,10 @@ python -m mkdocs build --strict
 
 The output is written to `site/`. `.github/workflows/docs.yml` can publish it automatically to GitHub Pages; see the [documentation-site guide](docs/en/documentation.md) for setup.
 
-## Community
+## Community and Feedback
 
-- QQ user group: `1097603920`
-- QQ developer group: `938132715`
+- Issues and suggestions: [GitHub Issues](https://github.com/NekoNei/ok-wsg-test/issues)
+- Upstream [ok-script](https://github.com/ok-oldking/ok-script) user group: `1097603920`
 - [Discord](https://discord.gg/vVyCatEBgA)
 
 ## Credits

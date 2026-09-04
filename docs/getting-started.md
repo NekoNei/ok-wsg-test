@@ -1,18 +1,15 @@
 # 快速开始
 
-## 1. 从模板创建仓库
+## 1. 获取仓库
 
-点击 GitHub 上的 [Use this template](https://github.com/ok-oldking/ok-script-app/generate)，创建自己的 repository，然后 clone：
+本仓库由 [ok-script-app](https://github.com/ok-oldking/ok-script-app) 模板创建并已完成初始化，源码位于：
 
 ```bash
-git clone https://github.com/<你的 GitHub 用户名>/<你的仓库名>.git
-cd <你的仓库名>
+git clone https://github.com/NekoNei/ok-wsg-test.git
+cd ok-wsg-test
 ```
 
-clone 完成后，可以选择以下任一方式初始化项目：
-
-- **使用 AI 编程工具（推荐）**：在 Codex 中输入 `使用 $initialize-ok-script-app 初始化这个仓库`。使用其他工具时，让它先阅读 `.agents/skills/initialize-ok-script-app/SKILL.md`。初始化助手会先询问游戏名、运行目标、仓库地址、图标和首个任务，再修改项目。
-- **手动初始化**：继续完成本文和后续页面中的步骤。
+仓库内置 `.agents/skills/` 下的 Agent Skills（`$initialize-ok-script-app`、`$ok-script-tasks`、`$ok-script-codegen`、`$ok-script-i18n`），可按需使用。
 
 ## 2. 安装 Python 3.12 和项目依赖
 

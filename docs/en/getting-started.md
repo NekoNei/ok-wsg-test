@@ -1,18 +1,15 @@
 # Quick Start
 
-## 1. Create a Repository From the Template
+## 1. Get the Repository
 
-Click [Use this template](https://github.com/ok-oldking/ok-script-app/generate) on GitHub, create your repository, and clone it:
+This repository was created from the [ok-script-app](https://github.com/ok-oldking/ok-script-app) template and is already initialized. The source lives at:
 
 ```bash
-git clone https://github.com/<your-github-name>/<your-repository>.git
-cd <your-repository>
+git clone https://github.com/NekoNei/ok-wsg-test.git
+cd ok-wsg-test
 ```
 
-Choose either initialization path:
-
-- **Use an AI coding tool (recommended):** In Codex, enter `Use $initialize-ok-script-app to initialize this repository.` With another tool, ask it to read `.agents/skills/initialize-ok-script-app/SKILL.md` first. The initializer gathers the game, runtime targets, repositories, icons, and first-task requirements before editing files.
-- **Initialize manually:** Continue with this page and the linked guides.
+The repository includes Agent Skills under `.agents/skills/` (`$initialize-ok-script-app`, `$ok-script-tasks`, `$ok-script-codegen`, `$ok-script-i18n`) for use as needed.
 
 ## 2. Install Python 3.12 and Project Dependencies
 

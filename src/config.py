@@ -78,25 +78,12 @@ config = {
             'use_openvino': True,
         }
     },
-    'windows': {  # Windows游戏请填写此设置
-        #'exe': ['StarRail.exe'],
-        # optional, if set, will search the exe only
-        # 'hwnd_class': 'UnrealWindow', #增加重名检查准确度
-        'interaction': ['Pynput', 'PostMessage', 'Genshin', 'PyDirect','ForegroundPostMessage'], # Genshin:某些操作可以后台, 部分游戏支持 PostMessage:可后台点击, 极少游戏支持 ForegroundPostMessage:前台使用PostMessage Pynput/PyDirect:仅支持前台使用
-        'capture_method': ['WGC', 'BitBlt_RenderFull', 'BitBlt'],  # Windows版本支持的话, 优先使用WGC, 否则使用BitBlt_Full. 支持的capture有 BitBlt, WGC, BitBlt_RenderFull, DXGI
-        'check_hdr': False, #当用户开启AutoHDR时候提示用户, 但不禁止使用
-        'force_no_hdr': False, #True=当用户开启AutoHDR时候禁止使用
-        'require_bg': True # 要求使用后台截图
-    },
     'adb': {  # 模拟器或Android设备请填写此设置, mumu模拟器使用原生截图和input,速度极快. 其他模拟器和真机使用adb,截图速度较慢
-        # optional, if set, will start the pacakge and ensure installed
-        #'packages': ['com.abc.efg1', 'com.abc.efg1']
+        # 本应用仅适配 Android 模拟器/设备；如需支持 Windows 原生游戏或浏览器游戏，
+        # 可参考 ok-script-app 模板在 src/config.py 中补充 windows 或 browser 配置
+        # optional, if set, will start the package and ensure installed
+        #'packages': ['com.example.game']
     },
-    # 'browser': {  # 浏览器游戏请填写此设置；windows、adb、browser 至少配置一个，也可以同时配置多个
-    #     'url': 'https://example.com/game',
-    #     'nick': 'Browser',
-    #     'resolution': (1280, 720),
-    # },
     'start_timeout': 120,  # default 60
     'supported_resolution': {
         'ratio': '16:9', #支持的游戏分辨率
@@ -105,16 +92,16 @@ config = {
     },
     'links': { # 关于里显示的链接, 可选
             'default': {
-                'github': 'https://github.com/ok-oldking/ok-script-app',
+                'github': 'https://github.com/NekoNei/ok-wsg-test',
                 'discord': 'https://discord.gg/vVyCatEBgA',
-                'share': 'Download from https://github.com/ok-oldking/ok-script-app',
+                'share': 'Download from https://github.com/NekoNei/ok-wsg-test',
                 'qq_group':'https://qm.qq.com/q/3Gq4VLvQe',
                 'qq_channel': 'https://pd.qq.com/s/djmm6l44y',
-                'faq': 'https://github.com/ok-oldking/ok-script-app'
+                'faq': 'https://github.com/NekoNei/ok-wsg-test'
             }
         },
     'screenshots_folder': "screenshots", #截图存放目录, 每次重新启动会清空目录
-    'gui_title': 'ok-script-app',  #窗口名
+    'gui_title': 'ok-wsg',  #窗口名
     'template_matching': { # 可选, 如使用OpenCV的模板匹配
         'coco_feature_json': os.path.join('assets', 'coco_annotations.json'), #coco格式标记, 需要png图片, 在debug模式运行后, 会对进行切图仅保留被标记部分以减少图片大小
         'default_horizontal_variance': 0.002, #默认x偏移, 查找不传box的时候, 会根据coco坐标, match偏移box内的
@@ -126,5 +113,8 @@ config = {
     'onetime_tasks': [  # 用户点击触发的任务
         ["src.tasks.MyOneTimeTask", "MyOneTimeTask"],
         ["ok", "DiagnosisTask"],
+    ],
+    'trigger_tasks': [  # 后台周期检查触发的任务
+        ["src.tasks.MyTriggerTask", "MyTriggerTask"],
     ],
 }

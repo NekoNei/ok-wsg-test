@@ -7,32 +7,30 @@
 - `pyproject.toml`: defines the Qt, web, and documentation dependency profiles.
 - `requirements.txt` and `requirements-web.txt`: compiled installation locks for the TOML profiles.
 - `deploy.txt`: lists files copied to a dedicated update repository.
-- `.github/workflows/mirrorchyan_*.yml`: optional MirrorChyan upload and release-note workflows.
+- `.github/workflows/mirrorchyan_*.yml`: optional MirrorChyan upload and release-note workflows (removed in this repository; see below).
 
 ## Adapt the Build Workflow
 
-Before the first release, update `.github/workflows/build.yml`:
+Before the first release, confirm `.github/workflows/build.yml` for this project:
 
-- Replace the Git identity.
-- Replace source and update repository URLs.
-- Replace installer names and Release download links.
-- Configure required GitHub Actions secrets.
-- Remove unused CNB, file-hosting, or other template-specific content.
+- Git identity (set to `NekoNei`).
+- Source and update repository URLs (both point to `https://github.com/NekoNei/ok-wsg-test.git`).
+- Installer names and Release download links (`ok-wsg-win32-*-setup.exe`).
+- Required GitHub Actions secrets (none needed while testing against the source repository).
+- Update-repo sync, MirrorChyan, file-hosting, and CNB template content have been removed.
 
 ## MirrorChyan
 
-### With MirrorChyan
+### Without MirrorChyan (current state of this project)
 
-Keep and update:
+This project does not use MirrorChyan: both `mirrorchyan_*.yml` workflows and the `Trigger MirrorChyanUploading` step in `build.yml` have been deleted, so `MirrorChyanUploadToken` is not needed.
+
+To add MirrorChyan later, restore the two workflow files:
 
 - `.github/workflows/mirrorchyan_uploading.yml`
 - `.github/workflows/mirrorchyan_release_note.yml`
 
-Replace `owner`, `repo`, `mirrorchyan_rid`, and installer filenames. Keep the dispatch step in `build.yml` and configure `MirrorChyanUploadToken`.
-
-### Without MirrorChyan
-
-Delete both MirrorChyan workflow files and remove the `Trigger MirrorChyanUploading` step from `build.yml`.
+Replace `owner`, `repo`, `mirrorchyan_rid`, and installer filenames, restore the dispatch step in `build.yml`, and configure `MirrorChyanUploadToken`.
 
 ## Push a Version Tag
 

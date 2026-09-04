@@ -12,7 +12,7 @@ Review at least these settings in `src/config.py`:
 
 ## Runtime Targets
 
-Configure at least one of `windows`, `adb`, or `browser`. A project may support multiple target types.
+This project is configured for the Android emulator/device (`adb`) target only. At least one of `windows`, `adb`, or `browser` must be configured; more than one may be enabled. To add other targets later, restore the corresponding blocks from the ok-script-app template's `src/config.py`.
 
 ### Native Windows Game
 
@@ -53,7 +53,7 @@ Replace `icons/icon.png` and `icons/icon.ico`. Keeping the filenames avoids extr
 Edit the app name, profile names, and `git_url` values in `pyappify.yml`:
 
 - Use a separate lightweight update repository for production.
-- The source repository can be used during early testing.
+- The source repository can be used during early testing (this project currently uses `https://github.com/NekoNei/ok-wsg-test.git`).
 - With a separate update repository, update the sync targets and secrets in `.github/workflows/build.yml`.
 
 After initialization, search for stale `ok-script-app`, `ok-oldking`, repository URLs, installer names, and community links inherited from the template.

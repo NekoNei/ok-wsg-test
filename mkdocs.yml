@@ -1,7 +1,7 @@
-site_name: ok-script-app
-site_description: Build Windows, Android emulator, and browser automation apps with ok-script.
-repo_name: ok-oldking/ok-script-app
-repo_url: https://github.com/ok-oldking/ok-script-app
+site_name: ok-wsg
+site_description: 战舰少女（Warship Girls）Android 模拟器自动化应用，基于 ok-script。
+repo_name: NekoNei/ok-wsg-test
+repo_url: https://github.com/NekoNei/ok-wsg-test
 edit_uri: edit/master/docs/
 
 docs_dir: docs

@@ -12,7 +12,7 @@
 
 ## 运行目标
 
-`windows`、`adb`、`browser` 必须至少配置一种，也可以同时配置多种。
+本项目已配置为仅使用 Android 模拟器/设备（`adb`）目标。`windows`、`adb`、`browser` 至少配置一种，也可以同时配置多种；如需增加其他目标，可参考 ok-script-app 模板的 `src/config.py` 恢复对应配置块。
 
 ### Windows 原生游戏
 
@@ -50,10 +50,10 @@ profile，然后重新编译对应的 `requirements.txt` 或 `requirements-web.t
 
 ## 更新仓库
 
-修改 `pyappify.yml` 中应用名称、profile 名称和 `git_url`：
+`pyappify.yml` 中的应用名称、profile 名称和 `git_url`：
 
 - 正式发布建议使用独立的轻量更新仓库。
-- 前期测试可以直接使用源码仓库。
+- 前期测试可以直接使用源码仓库（本项目当前使用源码仓库 `https://github.com/NekoNei/ok-wsg-test.git`）。
 - 使用独立更新仓库时，同步修改 `.github/workflows/build.yml` 中的同步目标和 Secrets。
 
 初始化后，搜索并替换模板遗留的 `ok-script-app`、`ok-oldking`、仓库 URL、安装包名称和社区链接。

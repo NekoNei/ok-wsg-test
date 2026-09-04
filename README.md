@@ -1,10 +1,10 @@
-# ok-script-app
+# ok-wsg（战舰少女 自动化）
 
 [English](README_en.md) | 中文
 
-ok-script-app 是一个基于 [ok-script](https://github.com/ok-oldking/ok-script) 的 Python 自动化项目模板，支持为 Windows 原生游戏、Android 模拟器和浏览器游戏创建带 GUI 的自动化应用。
+ok-wsg 是战舰少女（Warship Girls）的 Android 模拟器自动化应用，基于 [ok-script](https://github.com/ok-oldking/ok-script) 构建，由 [ok-script-app](https://github.com/ok-oldking/ok-script-app) 模板初始化而来。当前仅配置 ADB 模拟器目标，可在 `src/tasks` 下开发战舰少女的自动化任务。
 
-这个仓库提供任务示例、OCR、模板匹配、配置控件、测试、i18n、EXE 打包和更新发布配置。它是起步工程和功能演示，不是某个具体游戏的自动化成品。
+这个仓库提供任务示例、OCR、模板匹配、配置控件、测试、i18n、EXE 打包和更新发布配置，是开发战舰少女自动化的起步工程。
 
 ## 文档
 
@@ -52,10 +52,10 @@ python -m mkdocs build --strict
 
 输出位于 `site/`。`.github/workflows/docs.yml` 可将网站自动发布到 GitHub Pages，具体设置见[文档网站说明](docs/documentation.md)。
 
-## 社区
+## 社区与反馈
 
-- 用户群：`1097603920`
-- 开发者群：`938132715`
+- 问题与建议：在 [GitHub Issues](https://github.com/NekoNei/ok-wsg-test/issues) 提交
+- 上游 [ok-script](https://github.com/ok-oldking/ok-script) 用户群：`1097603920`
 - [Discord](https://discord.gg/vVyCatEBgA)
 
 ## 致谢

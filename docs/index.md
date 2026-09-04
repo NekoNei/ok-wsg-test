@@ -1,16 +1,16 @@
-# ok-script-app
+# ok-wsg
 
 [English](en/index.md)
 
-ok-script-app 是一个基于 [ok-script](https://github.com/ok-oldking/ok-script) 的 Python 自动化项目模板，适用于 Windows 原生游戏、Android 模拟器和浏览器游戏。
+ok-wsg 是战舰少女（Warship Girls）的 Android 模拟器自动化应用，基于 [ok-script](https://github.com/ok-oldking/ok-script) 构建，由 [ok-script-app](https://github.com/ok-oldking/ok-script-app) 模板初始化而来。
 
-这个仓库不是某个具体游戏的自动化成品。它提供可直接运行的 GUI、任务与配置控件示例、OCR、模板匹配、测试、i18n、EXE 打包和更新发布配置。
+仓库提供可直接运行的 GUI、任务与配置控件示例、OCR、模板匹配、测试、i18n、EXE 打包和更新发布配置，可在此基础上开发战舰少女的自动脚本。
 
 ## 从这里开始
 
-1. 按照[快速开始](getting-started.md)从模板创建并初始化仓库。
-2. 在[应用配置](configuration.md)中选择至少一种运行目标。
-3. 根据[任务开发](tasks.md)创建并注册第一个任务。
+1. 阅读[快速开始](getting-started.md)了解仓库布局与本地运行方式。
+2. 在[应用配置](configuration.md)中查看 ADB 模拟器目标配置。
+3. 根据[任务开发](tasks.md)创建并注册自动化任务。
 4. 使用[打包与发布](release.md)中的流程生成 EXE。
 
 ## 功能演示
