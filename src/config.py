@@ -79,10 +79,10 @@ config = {
         }
     },
     'adb': {  # 模拟器或Android设备请填写此设置, mumu模拟器使用原生截图和input,速度极快. 其他模拟器和真机使用adb,截图速度较慢
-        # 本应用仅适配 Android 模拟器/设备；如需支持 Windows 原生游戏或浏览器游戏，
+        # 本应用仅适配 MuMu 模拟器运行的战舰少女；如需支持 Windows 原生游戏或浏览器游戏，
         # 可参考 ok-script-app 模板在 src/config.py 中补充 windows 或 browser 配置
         # optional, if set, will start the package and ensure installed
-        #'packages': ['com.example.game']
+        'packages': ['com.huanmeng.zhanjian2'],
     },
     'start_timeout': 120,  # default 60
     'supported_resolution': {
